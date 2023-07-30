@@ -47,7 +47,7 @@ https://github.com/shimna-puthanayil/get-my-logo/blob/main/examples/logo.svg
 
 ![LOGO](./examples/logo.svg)
 
-#### Examples of logos generated:
+#### Examples of generated logos:
 
 https://github.com/shimna-puthanayil/get-my-logo/tree/main/examples
 
