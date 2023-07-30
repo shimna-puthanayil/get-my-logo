@@ -1,10 +1,8 @@
-# get-my-logo
-The application helps to design logos for the projects.
 # SVG Logo Maker
 
 ## Description
 
-This command-line application dynamically generates a professional README file from a user's input. The user can give information about the new repository based on which a project README.md will be generated with the title of project and sections entitled Description, Table of contents, Installation, Usage, License, Contributing, Tests and Questions. The README file contains a badge  at the beginning after the title for the license the application is covered under. It also includes the user's GitHub username and the link to the GitHub profile in the section 'Questions'.
+This command-line application dynamically generates a logo and save it as an SVG file from a user's input. This application is created using javascript, npm package manager, node.js and jest testing framework.  The application prompts the user to select a shape, provide text, text color and shape color for the logo and save the generated SVG to a .svg file. It also makes sure that the added text is not more than 3 characters long and the colors are valid .This is done with the help of the packages 'inquirer-maxlength-input-prompt' and 'is-valid-css-color'. The command line interface is built using inquirer.js. The logo is generated using SVG markup which is created using javascript template literals and written to a .svg file using fs module.
 
 ## Installation
 
@@ -17,47 +15,70 @@ This command-line application dynamically generates a professional README file f
   ```
 
 ## Usage
-The application will be invoked by using the following command:
+
+The application can be invoked by using the following command:
 
   ```
-  node index.js
+  node index.js  
   ```
-The user is prompted with a series of questions for information about the application repository when the application is run . These questions include GitHub username, email address, project's title, short description of the project, license the project is covered under (the user has to choose the license from a list of licenses), command needed to install the dependencies and tests, usage instructions and how to contribute to the project. After all the questions are answered a success message will be displayed and a README.md file will be generated in the folder 'output'.
+
+OR
+
+  ```
+  npm start
+  ```
+
+The user is prompted to select text, text color, shape and shape color of the logo when the application is run . The length of the text is restricted to 3 characters. If the user enters a text which is more than 3 characters then a message will be displayed saying 'Input contains too many characters!'.The text color and shape color can be either a color keyword or a hexadecimal number. When the user is prompted to select a shape for the logo, then a list of shapes (Circle, Triangle and Square) will be displayed to choose a shape from.  After input for all the prompts are entered a success message will be displayed and a logo.svg file will be generated in the folder 'examples'.
 
 #### Link to walkthrough video :
 
-https://drive.google.com/file/d/15Vqal9twn2-beLRXK6EbedIPafDemG7F/view?usp=sharing
+https://drive.google.com/file/d/12_N9_cSRhxjUMt3nRA10MNYB6Awc101r/view?usp=sharing
 
-#### Link to generated README.md :
 
-https://github.com/shimna-puthanayil/project-doc-generator/blob/main/Develop/output/README.md
+The following image shows the application's appearance and functionality :
 
-The following images show the application's appearance and functionality :
+[![LM 1](./screenshots/logo.gif)](https://drive.google.com/file/d/12_N9_cSRhxjUMt3nRA10MNYB6Awc101r/view?usp=sharing)
 
-![README](./Develop/images/READ-ME.gif)
+#### Link to generated logo :
 
-![README 1](./Develop/images/README1.png)
+https://github.com/shimna-puthanayil/get-my-logo/blob/main/examples/logo.svg
 
- #### README.md
+#### Generated logo.svg
 
-![README 2](./Develop/images/README2.png)
+![LOGO](./examples/logo.svg)
 
-![README 3](./Develop/images/README3.png)
+#### Examples of logos generated:
 
-#### Preview of README
-
-![README 4](./Develop/images/README4.png)
-
-![README 5](./Develop/images/README5.png)
+https://github.com/shimna-puthanayil/get-my-logo/tree/main/examples
 
 ## Credits
 
 #### References
 
-https://gist.github.com/lukas-h/2a5d00690736b4c3a7ba
+http://cs.wellesley.edu/~cs204/readings/OOP2/
 
-https://meta.stackexchange.com/questions/82718/how-do-i-escape-a-backtick-within-in-line-code-in-markdown
+https://www.npmjs.com/package/inquirer
+
+https://www.npmjs.com/package/is-valid-css-color
+
+https://www.npmjs.com/package/inquirer-maxlength-input-prompt
+
+https://archive.jestjs.io/docs/en/24.x/expect#tothrowerror
+
+https://archive.jestjs.io/docs/en/24.x/expect
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started
+
+https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Basic_Shapes
 
 ## License
 
 [MIT](https://opensource.org/licenses/MIT) license.
+
+ ## Tests
+
+  To run tests, run the following command :
+
+  ```
+  npm test
+  ```
